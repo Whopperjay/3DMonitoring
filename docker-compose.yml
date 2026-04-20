@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  bambu-monitor:
+    build: .
+    image: bambu-monitor:latest
+    container_name: bambu-monitor
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PORT=5006
+      - TZ=Europe/Paris

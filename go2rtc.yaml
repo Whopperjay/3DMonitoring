@@ -1,0 +1,9 @@
+streams:
+  bambu_camera:
+    - rtsp://bblp:20179676@192.168.1.95:322/streaming/live/1
+
+api:
+  listen: ":1984"
+
+rtsp:
+  listen: ":8554"
